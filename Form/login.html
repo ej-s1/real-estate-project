@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login - MyRealEstate</title>
+  <link rel="stylesheet" href="../home.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body class="login-page">
+
+  
+
+  <div class="login-container" id="loginContainer">
+    <h2>Login</h2>
+
+    <form id="loginForm" novalidate>
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" class="form-control" autocomplete="email" required>
+      <small class="field-error" id="emailError"></small>
+
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" class="form-control" autocomplete="current-password" required>
+      <small class="field-error" id="passwordError"></small>
+
+      <button type="submit" class="btn-custom" id="loginBtn">Login</button>
+    </form>
+
+    <p class="text-danger" id="formError" role="alert"></p>
+
+    <div class="register-link">
+      <p>Don't have an account?</p>
+      <a href="register.html" class="btn-light">Register here</a>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+  <script src="../navbar.js" data-navbar="public" data-root="../"></script>
+</body>
+</html>
