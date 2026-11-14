@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Add Property - MyRealEstate</title>
+  <link rel="stylesheet" href="../home.css">
+  <link rel="stylesheet" href="sadd.css">
+</head>
+<body class="add-page">
+
+  
+
+  <main class="add-main">
+    <h2>Add New Property</h2>
+
+    <div class="form-card">
+      <p class="error-message" id="formError" role="alert"></p>
+
+      <form id="propertyForm" novalidate>
+        <div class="form-group">
+          <label for="title">Title <span class="req">*</span></label>
+          <input id="title" type="text" placeholder="Short title or headline">
+          <small class="field-error" id="titleError"></small>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="propertyType">Property Type <span class="req">*</span></label>
+            <select id="propertyType">
+              <option value="">-- Select Property Type --</option>
+              <option value="House">House</option>
+              <option value="Apartment/Flat">Apartment / Flat</option>
+              <option value="Villa">Villa</option>
+              <option value="Office">Office</option>
+              <option value="Land">Land</option>
+            </select>
+            <small class="field-error" id="propertyTypeError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="transactionType">Transaction Type <span class="req">*</span></label>
+            <select id="transactionType">
+              <option value="">-- Select Transaction Type --</option>
+              <option value="For Sale">Sale</option>
+              <option value="For Rent">Rent</option>
+            </select>
+            <small class="field-error" id="transactionTypeError"></small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="price">Price ($) <span class="req">*</span></label>
+            <input id="price" type="number" step="0.01" placeholder="e.g. 120000.00">
+            <small class="field-error" id="priceError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="location">Location <span class="req">*</span></label>
+            <input id="location" type="text" placeholder="City, neighborhood or address">
+            <small class="field-error" id="locationError"></small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="size">Size (m²) <span class="req">*</span></label>
+            <input id="size" type="number" step="0.1" placeholder="e.g. 120.5">
+            <small class="field-error" id="sizeError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="bedrooms">Bedrooms <span class="req">*</span></label>
+            <input id="bedrooms" type="number" min="0" placeholder="e.g. 3">
+            <small class="field-error" id="bedroomsError"></small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="bathrooms">Bathrooms <span class="req">*</span></label>
+            <input id="bathrooms" type="number" min="0" placeholder="e.g. 2">
+            <small class="field-error" id="bathroomsError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="floor">Floor (optional)</label>
+            <input id="floor" type="number" placeholder="e.g. 2">
+            <small class="field-error" id="floorError"></small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="yearBuilt">Year Built (optional)</label>
+            <input id="yearBuilt" type="number" placeholder="e.g. 2015">
+            <small class="field-error" id="yearBuiltError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="photoPath">Photo URL <span class="req">*</span></label>
+            <input id="photoPath" type="text" placeholder="https://example.com/image.jpg">
+            <small class="field-error" id="photoPathError"></small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="otherDetails">Other Details (optional)</label>
+          <textarea id="otherDetails" placeholder="Additional info, features, description"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary" id="saveBtn">Save Property</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="../common.js"></script>
+  <script src="sadd.js"></script>
+  <script src="../navbar.js" data-navbar="seller" data-root="../"></script>
+</body>
+</html>
