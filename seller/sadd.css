@@ -1,0 +1,156 @@
+/* Loaded after ../style.css: overrides the page background and adds the form card */
+body.add-page {
+  background: linear-gradient(135deg, #1f2937, #111827);
+  color: #f3f4f6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar nav a.active {
+  color: #10b981;
+}
+
+.add-main {
+  padding: 20px;
+}
+
+.add-main h2 {
+  color: #10b981;
+  font-size: 32px;
+  margin: 25px 0;
+  text-align: center;
+}
+
+/* Form card */
+.form-card {
+  background: linear-gradient(145deg, #111827, #1f2937);
+  padding: 30px 35px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  max-width: 850px;
+  margin: 20px auto;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.form-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Grid for form rows */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group:not(.form-row .form-group) {
+  margin-bottom: 15px;
+}
+
+.form-card label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #e5e7eb;
+}
+
+.req { color: #ef4444; }
+
+.form-card input[type="text"],
+.form-card input[type="number"],
+.form-card textarea,
+.form-card select {
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  background: #374151;
+  color: #f3f4f6;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+.form-card input::placeholder,
+.form-card textarea::placeholder {
+  color: #9ca3af;
+}
+
+.form-card input:focus,
+.form-card select:focus,
+.form-card textarea:focus {
+  background: #4b5563;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.3);
+}
+
+.form-card .invalid {
+  box-shadow: 0 0 0 2px #f87171;
+}
+
+.form-card textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Errors take no space until there is a message */
+.field-error {
+  color: #f87171;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.field-error:empty {
+  display: none;
+}
+
+.form-actions {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #10b981;
+  color: white;
+  padding: 14px 25px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #059669;
+  transform: translateY(-2px);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.error-message {
+  color: #f87171;
+  margin: 0 0 12px;
+  font-weight: 500;
+}
+
+.error-message:empty {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 880px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .form-card { padding: 24px 20px; }
+}
