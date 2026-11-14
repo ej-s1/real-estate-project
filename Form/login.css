@@ -1,0 +1,85 @@
+/* Loaded after style.css: overrides the page background and adds the login card */
+body.login-page {
+  background: url('https://i.pinimg.com/originals/82/2f/d3/822fd3a227370187957ecef8ee6f2f0e.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Slide-down container */
+.login-container {
+  max-width: 400px;
+  margin: 80px auto;
+  background: rgba(128, 128, 128, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  color: white;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.login-container.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Inputs keep the original look: default font, no border, slightly wider than the button */
+input.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: none;
+}
+
+input.form-control.invalid {
+  outline: 2px solid #ff6b6b;
+}
+
+/* Field errors take no space until there is a message */
+.field-error {
+  display: block;
+  margin: -8px 0 12px;
+  color: #ffd7d3;
+}
+
+.field-error:empty {
+  display: none;
+}
+
+.btn-custom {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-custom:hover {
+  background-color: #0056b3;
+}
+
+.btn-custom:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.text-danger {
+  color: #ff6b6b;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.register-link {
+  margin-top: 15px;
+  text-align: center;
+}
