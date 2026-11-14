@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buyer Dashboard - MyRealEstate</title>
+  <link rel="stylesheet" href="../home.css">
+  <link rel="stylesheet" href="bdashboard.css">
+</head>
+<body>
+
+  <script src="../navbar.js" data-navbar="buyer" data-root="../"></script>
+
+  <div id="properties-section">
+    <h2>Available Properties</h2>
+
+    <form class="filter-bar" id="filterForm">
+      <select id="typeFilter" aria-label="Type">
+        <option value="">Sale and Rent</option>
+        <option value="sale">Sale</option>
+        <option value="rent">Rent</option>
+      </select>
+
+      <select id="modeFilter" aria-label="Price filter type">
+        <option value="below">Up to</option>
+        <option value="above">Above</option>
+      </select>
+
+      <input type="number" id="priceFilter" min="0" placeholder="Price ($)" aria-label="Price">
+      <button type="button" id="clearFilter">Clear</button>
+    </form>
+    <p class="filter-count" id="filterCount"></p>
+
+    <div id="propertiesList"></div>
+  </div>
+
+  <script src="../filter.js"></script>
+  <script src="../common.js"></script>
+  <script src="bdashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+/* Loaded after style.css: it provides the body, navbar, #properties-section and .properties-grid */
+
+.buyer-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.buyer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.property-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.buyer-ribbon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.buyer-ribbon.sale { background: #fbbf24; }
+.buyer-ribbon.rent { background: #ef4444; }
+
+.property-info {
+  padding: 15px;
+  color: white;
+  position: relative;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.property-info h3 {
+  margin: 0;
+  font-size: clamp(16px, 2vw, 20px);
+}
+
+.property-info p {
+  margin: 5px 0;
+  color: #eee;
+  font-size: 14px;
+}
+
+.property-info p strong {
+  color: #fbbf24;
+}
+
+.property-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Save button: bookmark icon like Instagram and TikTok */
+.heart-btn {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.heart-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  transition: fill 0.2s;
+  pointer-events: none;
+}
+
+.heart-btn.saved {
+  color: #f39c12;
+}
+
+.heart-btn.saved svg {
+  fill: currentColor;
+}
+
+.heart-btn:hover {
+  transform: scale(1.15);
+}
+
+.heart-btn:active {
+  transform: scale(0.85);
+}
+
+.heart-btn:hover {
+  transform: scale(1.2);
+}
