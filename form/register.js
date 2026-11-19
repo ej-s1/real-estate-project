@@ -8,7 +8,6 @@ const registerBtn = document.getElementById('registerBtn');
 const registerContainer = document.getElementById('registerContainer');
 
 // ---------- Storage helpers (always try/catch) ----------
-// This page does not load common.js, so it has its own small copies.
 function readStorage(key, fallback) {
   try {
     const raw = localStorage.getItem(key);
@@ -32,8 +31,6 @@ function writeStorage(key, value) {
 
 // ---------- Register (demo, without a backend) ----------
 // The accounts are saved under the key 'users' and read by login.js.
-// When the backend is ready, replace the body of registerUser with a fetch('/api/register') call.
-// The fields match your User model: fullName, email, password, role.
 // Passwords are kept as plain text here only because this is a demo.
 function registerUser(user) {
   const users = readStorage('users', []);
