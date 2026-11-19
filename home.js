@@ -1,4 +1,4 @@
-// ---------- Property class (same fields as Real_Estate.Models.Property) ----------
+// ---------- Property class  ----------
 class Property {
   constructor(data) {
     this.id = data.id;
@@ -18,9 +18,7 @@ class Property {
 }
 
 // ---------- Data layer ----------
-// For now the data lives here and in localStorage. When the backend is ready, replace the body of
-// getProperties with a fetch('/api/properties') call.
-// JSON field names should be: title, price, photoPath, transactionType.
+// For now the data lives here and in localStorage.
 const HOUSE_PHOTO = 'https://usvintagewood.com/wp-content/uploads/2021/05/image1-1024x683.jpg';
 
 const SAMPLE = [
@@ -70,7 +68,7 @@ function randomGradient() {
   return gradients[Math.floor(Math.random() * gradients.length)];
 }
 
-// Escape text so data from a backend can never inject HTML
+
 function esc(text) {
   const div = document.createElement('div');
   div.textContent = text;
